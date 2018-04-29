@@ -1,6 +1,4 @@
-# vue-cli
-
-> Vue.js project
+# ISS-Time based on vue-cli
 
 ## Build Setup
 
