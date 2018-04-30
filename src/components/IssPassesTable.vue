@@ -5,16 +5,17 @@
         :headers="headers"
         :items="tableData"
         :loading="isLoading"
-        disable-initial-sort
         hide-actions
         class="elevation-1">
         <template slot="items" slot-scope="props">
+          <tr :key='props.item.rise'>
           <td>{{ props.item.rise }}</td>
           <td class="text-xs-center">{{ props.item.duration}}</td>
           <td class="text-xs-center">
             <v-icon v-if="!props.item.isDay">far fa-moon</v-icon>
             <v-icon v-if="props.item.isDay">far fa-sun</v-icon>
           </td>
+          </tr>
         </template>
       </v-data-table>
     </v-container>
@@ -34,9 +35,9 @@
         passesTimes: 10,
         isLoading: false,
         headers: [
-          {text: 'Rise', align: 'left', value: 'rise', sortable:false},
-          {text: 'Duration', value: 'duration', align: 'center', sortable:false},
-          {text: 'Day/Night', value: 'isDay', align: 'center', sortable:false}
+          {text: 'Rise', align: 'left', value: 'rise'},
+          {text: 'Duration', value: 'duration', align: 'center'},
+          {text: 'Day/Night', value: 'isDay', align: 'center'}
         ],
       }
     },
