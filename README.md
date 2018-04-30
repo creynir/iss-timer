@@ -1,7 +1,5 @@
-# vue-cli
-
-> Vue.js project
-
+# ISS-Timer based on vue-cli
+Shows 10 International Space Station (ISS) passes over selected city. Project shows possible way how to build middle size applications on Vue and Vuex.  
 ## Build Setup
 
 ``` bash
